@@ -1,0 +1,114 @@
+// GENERAL DOCUMENT STYLES
+body {
+    font-family: $font-os;
+    font-size: $primary-font-size;
+    font-weight: $font-weght-normal;
+    line-height: $lineheight;
+    color: $font-color;
+    background-color: $primary-bg-color;
+    display: flex;
+    flex-direction: column;
+	position: relative;
+	overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a[href]:not([class]) {
+    color: #008000;
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a[href^="http"]:empty::before {
+    content: attr(href);
+}
+
+button {
+    all: unset;
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: none;
+  outline: #000 dotted 1px;
+  outline-offset: .05em;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  font-size: 16px;
+}
+
+br + br {
+    display: none;
+}
+
+::placeholder {
+	color: $green-color;
+}
+
+::selection{
+	background-color: $orange-color;
+	color: $white-color;
+}
+
+input, textarea {
+	// outline: none;
+	&:focus:required:invalid {
+		border-color: $red-color;
+    }
+	&:required:valid {
+		border-color: $green-color;
+    }
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+:root {
+    font-size: calc(1vw + 1vh + .5vmin);
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.container {
+    @include container();
+    @include sm(max-width, rem(510));
+    @include md(max-width, rem(690));
+    @include lg(max-width, rem(930));
+    @include xl(max-width, rem(1110));
+}

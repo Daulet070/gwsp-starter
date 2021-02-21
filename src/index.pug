@@ -1,0 +1,21 @@
+
+extends views/layouts/main
+include views/helpers/mixins
+
+block vars
+	- const title = "gulp-pug-starter"
+
+block content
+	include blocks/modules/header/header
+	main.main
+		include blocks/modules/about/about
+		include blocks/modules/team/team
+		include blocks/modules/skills/skills
+		include blocks/modules/portfolio/portfolio
+		include blocks/modules/testimonial/testimonial
+		include blocks/modules/contact/contact
+	include blocks/modules/footer/footer
+	
+block scripts
+	script(src="js/vendor.chunk.js")
+	script(src="js/main.js")

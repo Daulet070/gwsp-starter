@@ -1,0 +1,60 @@
+@import '../vendor/import/smart-grid';
+
+/* Base Styles
+********************************************************************* */
+html {
+	font-size: 100%;
+}
+
+/* Grid
+********************************************************************* */  
+
+.row {
+	@include row-flex();
+	// @include md(justify-content, center);
+}
+.columns {
+	@include col();
+	@include size(12);
+	@include size-lg(6);
+	@include md(justify-content, center);
+}
+.three {
+	@include size(12);
+	@include size-lg(3);
+}
+.one-third {
+	@include col();
+	@include size(12);
+	@include size-lg(3);
+}
+.six {
+    display: flex;
+	flex-direction: column;
+}
+.nine{
+	@include size(12);
+	@include size-lg(9);
+}
+.section-heading {
+	flex-direction: column;
+}
+/* Typography
+********************************************************************* */
+
+/* Misc
+********************************************************************* */
+
+.icon {
+	padding-right: 10px;
+	color: #e55d87;
+}
+.block {
+	width: 70px;
+	height: 2px;
+	background: #e55d87; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
+	background: -webkit-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
+	background: linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%);
+	margin-bottom: 50px;
+}
