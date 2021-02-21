@@ -128,9 +128,9 @@ const js = () => {
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(webpackStream(webpackConfig), webpack)
-    .pipe(gulpif(production, rename({
-      suffix: '.min'
-    })))
+    // .pipe(gulpif(production, rename({
+    //   suffix: '.min'
+    // })))
     .pipe(dest(path.build.js))
     .pipe(debug({
       'title': 'JS files'
