@@ -946,7 +946,7 @@ nav ul a:hover {
 .image:hover {
   opacity: 0.6;
   transition: .3s;
-  background-image: url(../images/hoverbg.png);
+  background-image: url(../img/cat.jpg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1143,4 +1143,4 @@ footer p {
   }
 }
 
-.webp .image:hover { background-image: url(../images/hoverbg.webp); }
+.webp .image:hover { background-image: url(../img/cat.webp); }
