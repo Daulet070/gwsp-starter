@@ -1,6 +1,9 @@
 ## GWSP Gulp Webpack Scss Pug
 ### Сборка для быстрой и гибкой верски проектов различной сложности
 ```
+git clone https://github.com/Daulet070/gwsp-starter.git
+```
+```
 npm i
 ```
 ```
