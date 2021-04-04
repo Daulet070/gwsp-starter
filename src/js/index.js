@@ -1,13 +1,7 @@
 'use-strict';
 
-import { browserWebPSupport } from './common/browserWebPSupport';
-import { modules }            from './import/modules';
-import { components }         from './import/components';
-
-browserWebPSupport();
-
-// components and modules code
-components();
-modules();
+import './common/browserWebPSupport';
+import './import/modules';
+import './import/components';
 
 console.log('index: its work!');

@@ -1,21 +1,16 @@
-const browserWebPSupport = () => {
+const testWebP = (callback) => {
+      
+  const webP = new Image();
 
-  const testWebP = (callback) => {
-        
-    const webP = new Image();
-
-    webP.onload = webP.onerror = () => {
-      callback(webP.height == 2);
-    };
-    webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+  webP.onload = webP.onerror = () => {
+    callback(webP.height == 2);
   };
-        
-  testWebP((support) => {
-    const body = document.querySelector('body');
-    support == true
-      ? body.classList.add('webp')
-      : body.classList.add('no-webp');
-  });
+  webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
 };
-
-export {browserWebPSupport};
+      
+testWebP((support) => {
+  const body = document.querySelector('body');
+  support == true
+    ? body.classList.add('webp')
+    : body.classList.add('no-webp');
+});

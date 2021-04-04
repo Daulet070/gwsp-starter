@@ -1,12 +1,4 @@
-import { header } from '../../blocks/modules/header/header';
-import { testimonial } from '../../blocks/modules/testimonial/testimonial';
-
-const modules = () => {
+import '../../blocks/modules/header/header';
+import '../../blocks/modules/testimonial/testimonial';
   
-  console.log('modules!');
-  header();
-  testimonial();
-
-};
-
-export { modules };
+console.log('modules!');
