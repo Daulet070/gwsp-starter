@@ -1,11 +1,11 @@
 ## GWSP Gulp Webpack Scss Pug
 ### Сборка для быстрой и гибкой верски проектов различной сложности
-
-<code> npm i </code>
 ```
-<code> npm run dev </code>
+npm i
 ```
-<code> npm run build </code>
+npm run dev
 ```
-
+npm run build
+```
+### P.S
 Верстка не моя, просто частично адаптировал для наглядности использования сборки.
